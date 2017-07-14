@@ -4,11 +4,12 @@ var hereKittyKitty = document.querySelector(".summon-cats")
 
 hereKittyKitty.addEventListener('click', function(){
 console.log("Here Kitty Kitty....");
-
+var number = "number"
+var amount = 5
 $.ajax({
   url: 'http://bitkittens.herokuapp.com/cats.json',
   method: 'GET',
-  data: {cats:5},
+  data: {number: amount},
   dataType: 'JSON'
 
 }).done(function(responsedata){
@@ -22,7 +23,7 @@ $.ajax({
     boxes[index].append(catPic);
 
 
-  },'5')
+  })
 
 })
 
