@@ -20,6 +20,7 @@ $.ajax({
     var catPic = document.createElement("img");
     catPic.src = cat.photo;
     catPic.alt = cat.name;
+    boxes[index].innerHTML = "";
     boxes[index].append(catPic);
 
 
