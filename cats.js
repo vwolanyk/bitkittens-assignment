@@ -6,6 +6,7 @@ hereKittyKitty.addEventListener('click', function(){
 console.log("Here Kitty Kitty....");
 var number = "number"
 var amount = 5
+var catList = [];
 $.ajax({
   url: 'http://bitkittens.herokuapp.com/cats.json',
   method: 'GET',
@@ -22,8 +23,15 @@ $.ajax({
     catPic.alt = cat.name;
     boxes[index].innerHTML = "";
     boxes[index].append(catPic);
+    catList.push(cat.name);
 
 
+  })
+
+  catList.forEach(function(cat){
+    var item = document.createElement("li");
+    item.innerHTML = cat;
+    visitors.append(item);
   })
 
 })

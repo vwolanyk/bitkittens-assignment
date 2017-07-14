@@ -7,6 +7,9 @@ main {
   margin: 0 auto;
   height: 100%;
 }
+body{ width: 1200px;}
+#visitors { margin: 0;
+}
 
 .cat-box {
   width: 100px;
